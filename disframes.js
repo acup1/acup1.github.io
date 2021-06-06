@@ -1,9 +1,6 @@
 function getElementByXpath(path) {
   return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 }
-e=getElementByXpath("/html/body/div/div[2]")
-e.innerHTML="<a style='position:absolute;z-index:100;top:100px;' onclick='createFrame()'>qwewqewqe</a>"+e.innerHTML;
-
 function createFrame(link){
   e=getElementByXpath("/html/body/div/div[2]")
   css="<style>#qwe {position:absolute;z-index:100 ;background-color:#f1f1f1;text-align:center;top:200px;right:200px;width:720px;height:480px;} .fb {color:black;vertical-align: middle;}</style>"
